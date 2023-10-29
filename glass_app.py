@@ -74,3 +74,30 @@ for feature in features_list:
   plt.figure(figsize=(15,5))
   sns.scatterplot(data=glass_df,x=feature,y="GlassType")
   st.pyplot()
+#histogram
+
+
+if st.sidebar.checkbox("show raw data"):
+  st.subheader("full dataset")
+  st.dataframe(glass_df)
+st.sidebar.subheader("histogram plot")
+hist_f=st.sidebar.multiselect("select x axis values",('RI', 'Na', 'Mg', 'Al', 'Si', 'K', 'Ca', 'Ba', 'Fe'))
+
+for feature in hist_f:
+  st.subheader(f"hist")
+  plt.figure(figsize=(15,5))
+  plt.hist(glass_df[feature],edgecolor="black")
+  st.pyplot()
+#boxplot
+
+if st.sidebar.checkbox("show raw data"):
+  st.subheader("full dataset")
+  st.dataframe(glass_df)
+st.sidebar.subheader("boxplot")
+b=st.sidebar.multiselect("select x axis values",('RI', 'Na', 'Mg', 'Al', 'Si', 'K', 'Ca', 'Ba', 'Fe'))
+
+for feature in b:
+  st.subheader(f"box")
+  plt.figure(figsize=(15,5))
+  sns.boxplot(data=glass_df,x=b,y="GlassType")
+  st.pyplot()

@@ -95,4 +95,4 @@ for feature in b:
   st.subheader(f"box")
   plt.figure(figsize=(15,5))
   sns.boxplot(glass_df[feature]
-  st.pyplot()
+st.pyplot()

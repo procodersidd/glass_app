@@ -94,5 +94,5 @@ b=st.sidebar.multiselect("select features for box",('RI', 'Na', 'Mg', 'Al', 'Si'
 for feature in b:
   st.subheader(f"box")
   plt.figure(figsize=(15,5))
-  sns.boxplot(glass_df[feature]
+  sns.boxplot(glass_df[feature])
   st.pyplot()

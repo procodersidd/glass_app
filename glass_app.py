@@ -79,7 +79,7 @@ for feature in features_list:
 
 
 st.sidebar.subheader("histogram plot")
-hist_f=st.sidebar.multiselect("select x axis values",('RI', 'Na', 'Mg', 'Al', 'Si', 'K', 'Ca', 'Ba', 'Fe'))
+hist_f=st.sidebar.multiselect("fetures of hist",('RI', 'Na', 'Mg', 'Al', 'Si', 'K', 'Ca', 'Ba', 'Fe'))
 
 for feature in hist_f:
   st.subheader(f"hist")
@@ -89,7 +89,7 @@ for feature in hist_f:
 #boxplot
 
 st.sidebar.subheader("boxplot")
-b=st.sidebar.multiselect("select x axis values",('RI', 'Na', 'Mg', 'Al', 'Si', 'K', 'Ca', 'Ba', 'Fe'))
+b=st.sidebar.multiselect("select features for box",('RI', 'Na', 'Mg', 'Al', 'Si', 'K', 'Ca', 'Ba', 'Fe'))
 
 for feature in b:
   st.subheader(f"box")

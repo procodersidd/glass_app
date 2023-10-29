@@ -77,9 +77,7 @@ for feature in features_list:
 #histogram
 
 
-if st.sidebar.checkbox("show raw data"):
-  st.subheader("full dataset")
-  st.dataframe(glass_df)
+
 st.sidebar.subheader("histogram plot")
 hist_f=st.sidebar.multiselect("select x axis values",('RI', 'Na', 'Mg', 'Al', 'Si', 'K', 'Ca', 'Ba', 'Fe'))
 
@@ -90,9 +88,6 @@ for feature in hist_f:
   st.pyplot()
 #boxplot
 
-if st.sidebar.checkbox("show raw data"):
-  st.subheader("full dataset")
-  st.dataframe(glass_df)
 st.sidebar.subheader("boxplot")
 b=st.sidebar.multiselect("select x axis values",('RI', 'Na', 'Mg', 'Al', 'Si', 'K', 'Ca', 'Ba', 'Fe'))
 
